@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProspectB2B PRO — CRM de prospecção B2B local para Windows</title>
+<meta name="description" content="Software desktop de prospecção B2B: base de leads, funil Kanban de oito etapas, tarefas e histórico em banco local SQLite, com servidor MCP para agentes de IA. Licença perpétua de R$ 997, sem mensalidade.">
+<link rel="canonical" href="https://prospectb2b-pro.vercel.app/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https://cdn.jsdelivr.net data:; media-src https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com; frame-src https://pay.hotmart.com https://docs.google.com; form-action 'self'; upgrade-insecure-requests">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b0c0e">
+<meta name="application-name" content="ProspectB2B PRO">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="ProspectB2B PRO">
+<meta property="og:title" content="ProspectB2B PRO — CRM de prospecção B2B local para Windows">
+<meta property="og:description" content="Base de leads, funil Kanban, tarefas e histórico em banco local. Servidor MCP para agentes de IA. Licença perpétua, sem mensalidade.">
+<meta property="og:url" content="https://prospectb2b-pro.vercel.app/">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Painel do ProspectB2B PRO com indicadores do funil comercial">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProspectB2B PRO — CRM de prospecção B2B local para Windows">
+<meta name="twitter:description" content="Software desktop com banco local, funil Kanban de oito etapas e servidor MCP para agentes de IA. Licença perpétua.">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/og.jpg">
+
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/favicon.svg">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/inter-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/inter-600.woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-1200.avif 1200w" imagesizes="(max-width: 1024px) 92vw, 520px" type="image/avif">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ProspectB2B PRO",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "CRM",
+  "operatingSystem": "Windows 10, Windows 11",
+  "description": "Software desktop de prospecção B2B com banco local SQLite, funil Kanban de oito etapas, tarefas, histórico comercial e servidor MCP local com 12 ferramentas para agentes de IA.",
+  "softwareVersion": "1.0.1-rc.1",
+  "releaseNotes": "Acesso antecipado. Validação final em Windows 10 e 11 reais pendente.",
+  "inLanguage": "pt-BR",
+  "url": "https://prospectb2b-pro.vercel.app/",
+  "offers": {
+    "@type": "Offer",
+    "price": "997.00",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock",
+    "url": "https://pay.hotmart.com/O108604594H",
+    "priceValidUntil": "2027-12-31"
+  },
+  "featureList": [
+    "Banco de dados local SQLite",
+    "Importação de CSV e XLSX com prévia",
+    "Funil de vendas Kanban com oito etapas",
+    "Tarefas e histórico por lead",
+    "Servidor MCP local com 12 ferramentas",
+    "Licenciamento offline com chave perpétua"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O ProspectB2B PRO funciona sem internet?","acceptedAnswer":{"@type":"Answer","text":"Sim. O aplicativo e o banco de dados rodam no computador do usuário. A internet é necessária para baixar o instalador, ativar a licença uma vez e, opcionalmente, conectar agentes de IA externos via MCP."}},
+    {"@type":"Question","name":"Onde ficam os dados dos leads?","acceptedAnswer":{"@type":"Answer","text":"Em um banco SQLite local, na pasta de dados do aplicativo dentro do perfil do usuário do Windows. O fluxo normal de uso não envia a base para servidores do fabricante; não existe back-end na nuvem."}},
+    {"@type":"Question","name":"A licença é mensal?","acceptedAnswer":{"@type":"Answer","text":"Não. A licença é perpétua, com pagamento único de R$ 997,00, que pode ser parcelado em até 12x no cartão pelo checkout da Hotmart. Não há assinatura nem cobrança recorrente do software."}},
+    {"@type":"Question","name":"O produto está validado em Windows?","acceptedAnswer":{"@type":"Answer","text":"Parcialmente. O release atual é 1.0.1-rc.1, em acesso antecipado. Os testes automatizados, o empacotamento e o fluxo de instalação estão implementados, mas a validação final em Windows 10 e 11 reais ainda está pendente — e é por isso que o produto é comercializado como acesso antecipado, com as condições informadas de forma explícita."}},
+    {"@type":"Question","name":"O Windows vai mostrar aviso ao instalar?","acceptedAnswer":{"@type":"Answer","text":"Pode mostrar. O instalador não possui certificado digital de assinatura de código, então o SmartScreen pode exibir aviso de editor desconhecido. Isso não indica arquivo malicioso: o pacote é gerado a partir do código-fonte do projeto e o hash SHA-256 é publicado junto da entrega para conferência."}},
+    {"@type":"Question","name":"Como recebo o arquivo e a licença?","acceptedAnswer":{"@type":"Answer","text":"O download do instalador é feito pela Hotmart, com espelho no Google Drive como alternativa. A chave de licença é emitida manualmente após a confirmação da compra, em até 1 dia útil, e enviada para o e-mail informado no checkout."}},
+    {"@type":"Question","name":"Quantos computadores posso ativar?","acceptedAnswer":{"@type":"Answer","text":"A licença padrão permite até 2 dispositivos. Para trocar de máquina, basta desativar no aplicativo antigo e ativar no novo, sem precisar de nova emissão."}},
+    {"@type":"Question","name":"O sistema é multiusuário?","acceptedAnswer":{"@type":"Answer","text":"Não. O ProspectB2B PRO é uma aplicação local de uso individual por instalação. Não há sincronização entre estações nem colaboração em tempo real nesta versão."}},
+    {"@type":"Question","name":"Preciso pagar algo para usar IA?","acceptedAnswer":{"@type":"Answer","text":"O ProspectB2B PRO não cobra por uso de IA e não revende modelos. Se o usuário conectar um agente externo, como Claude Desktop ou Cursor, via MCP, esse fornecedor pode cobrar pelo próprio serviço. Esses custos são externos e contratados diretamente pelo cliente."}},
+    {"@type":"Question","name":"E se eu precisar de reembolso?","acceptedAnswer":{"@type":"Answer","text":"O pedido segue as regras de reembolso da Hotmart, plataforma responsável pelo pagamento, e o direito de arrependimento previsto no Código de Defesa do Consumidor. A licença vinculada a um pedido reembolsado é registrada como revogada no controle de licenças."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="site-header" id="topo">
+  <div class="wrap header-inner">
+    <a class="brand" href="#topo">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span class="brand-text">ProspectB2B <em>PRO</em></span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#problema">Contexto</a>
+      <a href="#demonstracao">Demonstração</a>
+      <a href="#produto">Produto</a>
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#licenca">Licença</a>
+      <a href="#engenharia">Engenharia</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" data-checkout href="https://pay.hotmart.com/O108604594H" rel="noopener">Adquirir licença</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="menu-mobile" id="menu-mobile" hidden>
+    <a href="#problema">Contexto</a>
+    <a href="#demonstracao">Demonstração</a>
+    <a href="#produto">Produto</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#licenca">Licença</a>
+    <a href="#engenharia">Engenharia</a>
+    <a href="#faq">Dúvidas</a>
+    <a class="btn btn-primary" data-checkout href="https://pay.hotmart.com/O108604594H" rel="noopener">Adquirir licença — R$ 997</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- 1. HERO -->
+  <section class="hero" aria-labelledby="titulo-hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Software de prospecção B2B · Windows 10/11 x64</p>
+          <h1 id="titulo-hero">Prospecção organizada, com os dados <span class="serif">sob o seu controle</span>.</h1>
+          <p class="hero-lead">Base de leads, funil de oito etapas, tarefas e histórico comercial em um aplicativo desktop com banco local. Um servidor MCP integrado permite que agentes de IA consultem e atualizem essa base sem enviá-la para servidores de terceiros.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" data-checkout href="https://pay.hotmart.com/O108604594H" rel="noopener">Adquirir licença — R$ 997</a>
+            <a class="btn btn-on-dark btn-lg" href="#demonstracao">Ver demonstração</a>
+          </div>
+          <p class="hero-note">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Release 1.0.1-rc.1 em acesso antecipado. A validação final em Windows 10 e 11 reais está pendente — <a href="#engenharia">ver o que já foi testado</a>.</span>
+          </p>
+        </div>
+        <figure class="hero-shot">
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-1200.avif 1200w" sizes="(max-width: 1024px) 92vw, 520px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-1200.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-1200.webp 1200w" sizes="(max-width: 1024px) 92vw, 520px" width="1200" height="818" alt="Painel do ProspectB2B PRO com total de leads, oportunidades em aberto e taxa de conversão do funil" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+        </figure>
+      </div>
+      <dl class="hero-facts">
+        <div><dt>Persistência</dt><dd>Banco SQLite local, no perfil do usuário</dd></div>
+        <div><dt>Licenciamento</dt><dd>Chave perpétua com validação offline</dd></div>
+        <div><dt>Operação</dt><dd>Funciona sem internet, sem back-end</dd></div>
+        <div><dt>Integração</dt><dd>12 ferramentas MCP para agentes de IA</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 2. PROBLEMA -->
+  <section class="section section--paper" id="problema" aria-labelledby="titulo-problema">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contexto</p>
+        <h2 id="titulo-problema">Planilha, CRM na nuvem e conversa solta não formam um processo comercial.</h2>
+        <p class="lede">A maior parte das operações de prospecção B2B não perde negócio por falta de contato. Perde por falta de registro: o lead existe em três lugares, o follow-up não tem dono e o histórico depende da memória de quem atendeu.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-item">
+          <span class="num">01</span>
+          <h3>Base fragmentada</h3>
+          <p>Contatos em planilha, conversas no mensageiro e anotações em outro arquivo. Quando alguém assume a conta, o contexto precisa ser reconstruído do zero.</p>
+        </article>
+        <article class="problem-item">
+          <span class="num">02</span>
+          <h3>Follow-up sem responsável</h3>
+          <p>Sem tarefa com prazo e dono, a oportunidade esfria entre uma semana e outra. O funil existe na apresentação comercial, não na rotina da equipe.</p>
+        </article>
+        <article class="problem-item">
+          <span class="num">03</span>
+          <h3>Dado sensível em servidor alheio</h3>
+          <p>Uma base de prospecção reúne nome, cargo, e-mail e telefone de decisores. Mantê-la em ferramenta de terceiro exige análise de contrato, retenção e LGPD.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. DEMONSTRAÇÃO -->
+  <section class="section section--muted" id="demonstracao" aria-labelledby="titulo-demo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Demonstração</p>
+        <h2 id="titulo-demo">O produto em execução, sem maquete.</h2>
+        <p class="lede">Gravação feita com o build entregue e dados de demonstração: base de leads, importação de planilha, funil Kanban, rotina de tarefas e o painel do servidor MCP.</p>
+      </div>
+      <div class="video-block" data-video-block>
+        <button class="video-facade" type="button" data-video-play aria-label="Reproduzir a demonstração — 1 min 20 s · narração em português">
+          <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/painel-1200.webp" width="1200" height="675" alt="Cena inicial da demonstração: painel do ProspectB2B PRO com indicadores do funil" loading="lazy" decoding="async">
+          <span class="play" aria-hidden="true"><span><svg viewBox="0 0 24 24" role="presentation"><path d="M8 5v14l11-7z"/></svg></span></span>
+          <span class="badge">1 min 20 s · narração em português</span>
+        </button>
+      </div>
+      <div class="video-meta">
+        <span>Capturas reais do aplicativo em execução</span>
+        <span>Dados de demonstração</span>
+        <span>1080p · legendas em português</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PRODUTO -->
+  <section class="section section--paper" id="produto" aria-labelledby="titulo-produto">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Produto</p>
+        <h2 id="titulo-produto">Quatro áreas que sustentam a rotina comercial.</h2>
+        <p class="lede">Todas as imagens abaixo são do aplicativo em execução, capturadas durante a bateria de testes automatizados, com dados de demonstração.</p>
+      </div>
+
+      <article class="feature">
+        <div class="feature-copy">
+          <span class="feature-label">01 · Base de leads</span>
+          <h3>Cadastro único, busca imediata e origem rastreável</h3>
+          <p>Cada registro reúne empresa, site, segmento, cidade, telefone, contato, cargo e e-mail. A deduplicação por CNPJ, domínio e e-mail evita que a mesma conta entre duas vezes na operação.</p>
+          <ul class="feature-list">
+            <li>Busca e filtro sobre a base inteira, não sobre uma página</li>
+            <li>Status sincronizado com a etapa do funil</li>
+            <li>Persistência verificada após reiniciar o aplicativo</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/leads-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/leads-1200.avif 1200w" sizes="(max-width: 1024px) 92vw, 560px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/leads-1200.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/leads-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/leads-1200.webp 1200w" sizes="(max-width: 1024px) 92vw, 560px" width="1200" height="818" alt="Tela de leads do ProspectB2B PRO com registro de empresa, contato, origem e status" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <figcaption>Base de leads com origem e status por registro.</figcaption>
+        </figure>
+      </article>
+
+      <article class="feature feature--rev">
+        <div class="feature-copy">
+          <span class="feature-label">02 · Importação</span>
+          <h3>Migração da planilha com prévia antes de gravar</h3>
+          <p>Importação de CSV e XLSX com leitura local, mapeamento automático de colunas e tela de prévia. O usuário vê quantos registros são válidos, duplicados ou inválidos antes de confirmar a gravação.</p>
+          <ul class="feature-list">
+            <li>Mapeamento automático de colunas com ajuste manual</li>
+            <li>Limite de 15 MB ou 5.000 linhas por lote</li>
+            <li>Resumo do resultado ao final da importação</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/importacao-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/importacao-1200.avif 1200w" sizes="(max-width: 1024px) 92vw, 560px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/importacao-1200.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/importacao-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/importacao-1200.webp 1200w" sizes="(max-width: 1024px) 92vw, 560px" width="1200" height="818" alt="Tela de prévia de importação com contadores de registros válidos, duplicados e inválidos" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <figcaption>Prévia da importação antes da gravação no banco.</figcaption>
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-copy">
+          <span class="feature-label">03 · Funil</span>
+          <h3>Kanban de oito etapas ligado ao banco de dados</h3>
+          <p>Novo, Qualificado, Contatado, Respondeu, Reunião, Proposta, Ganho e Perdido. Ao mover o cartão, o status do lead e os indicadores do painel são recalculados a partir do registro, não de uma cópia.</p>
+          <ul class="feature-list">
+            <li>Movimentação por arrastar e soltar ou por teclado</li>
+            <li>Indicadores calculados por consulta ao SQLite</li>
+            <li>Mesma informação no painel e no funil</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/kanban-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/kanban-1200.avif 1200w" sizes="(max-width: 1024px) 92vw, 560px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/kanban-1200.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/kanban-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/kanban-1200.webp 1200w" sizes="(max-width: 1024px) 92vw, 560px" width="1200" height="818" alt="Funil Kanban do ProspectB2B PRO com colunas de etapas e cartões de oportunidades" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <figcaption>Funil Kanban com as oito etapas do processo comercial.</figcaption>
+        </figure>
+      </article>
+
+      <article class="feature feature--rev">
+        <div class="feature-copy">
+          <span class="feature-label">04 · Rotina</span>
+          <h3>Tarefas, prazos e histórico por conta</h3>
+          <p>Tarefas com prazo, prioridade e vínculo ao lead, com visões de abertas, atrasadas e concluídas. O histórico registra ligação, e-mail, reunião e proposta, em ordem cronológica.</p>
+          <ul class="feature-list">
+            <li>Visão de atrasadas para o acompanhamento diário</li>
+            <li>Atividades registradas por lead, não por usuário</li>
+            <li>Contexto recuperável em segundos na troca de responsável</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/historico-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/historico-1200.avif 1200w" sizes="(max-width: 1024px) 92vw, 560px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/historico-1200.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/historico-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/historico-1200.webp 1200w" sizes="(max-width: 1024px) 92vw, 560px" width="1200" height="818" alt="Histórico comercial de um lead com atividades, datas e mudanças de etapa" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <figcaption>Histórico comercial do lead, com atividades e mudanças de etapa.</figcaption>
+        </figure>
+      </article>
+
+      <div class="shot-grid">
+        <figure>
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/dashboard-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/dashboard-1200.avif 1200w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 340px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/dashboard-640.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/dashboard-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/dashboard-1200.webp 1200w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 340px" width="640" height="436" alt="Painel inicial do aplicativo antes de qualquer cadastro, com indicadores zerados" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <figcaption>Painel inicial, com indicadores calculados do banco.</figcaption>
+        </figure>
+        <figure>
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/tema-escuro-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/tema-escuro-1200.avif 1200w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 340px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/tema-escuro-640.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/tema-escuro-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/tema-escuro-1200.webp 1200w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 340px" width="640" height="436" alt="Aplicativo com tema escuro e painel de configuração do servidor MCP local" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <figcaption>Tema escuro e painel do servidor MCP.</figcaption>
+        </figure>
+        <figure>
+          <div class="shot-frame">
+            <picture>
+              <source type="image/avif" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/configuracoes-640.avif 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/configuracoes-1200.avif 1200w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 340px">
+              <img src="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/configuracoes-640.webp" srcset="https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/configuracoes-640.webp 640w, https://cdn.jsdelivr.net/gh/viniubata/prospectb2b-assets@f3c7a05/assets/img/configuracoes-1200.webp 1200w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 340px" width="640" height="436" alt="Tela de configurações com licença, tema e parâmetros do servidor MCP" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <figcaption>Configurações de licença, tema e MCP.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FLUXO -->
+  <section class="section section--muted" id="fluxo" aria-labelledby="titulo-fluxo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Operação</p>
+        <h2 id="titulo-fluxo">Da compra ao primeiro lote importado.</h2>
+        <p class="lede">O processo é deliberadamente simples e documentado: nenhuma etapa depende de integração automática que ainda não exista.</p>
+      </div>
+      <ol class="flow">
+        <li>
+          <span class="step-num">01</span>
+          <h3>Aquisição</h3>
+          <p>Checkout processado pela Hotmart, com pagamento único e parcelamento em até 12x no cartão.</p>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <h3>Download</h3>
+          <p>Instalador, LEIA-ME e hash SHA-256 na área de membros da Hotmart, com espelho no Google Drive.</p>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <h3>Licença</h3>
+          <p>Chave individual emitida para o pedido em até 1 dia útil e enviada ao e-mail informado.</p>
+        </li>
+        <li>
+          <span class="step-num">04</span>
+          <h3>Ativação</h3>
+          <p>Chave colada no aplicativo. A validação é offline, por assinatura Ed25519, sem consulta a servidor.</p>
+        </li>
+        <li>
+          <span class="step-num">05</span>
+          <h3>Operação</h3>
+          <p>Importação da base, organização do funil e rotina de tarefas. MCP opcional para agentes de IA.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. TECNOLOGIA / DIFERENCIAIS -->
+  <section class="section section--paper" id="tecnologia" aria-labelledby="titulo-tecnologia">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Arquitetura</p>
+        <h2 id="titulo-tecnologia">Decisões de engenharia que mudam o custo de operação.</h2>
+        <p class="lede">O produto foi construído sobre quatro premissas: dado no computador do cliente, licença verificável sem servidor, integração com IA por protocolo aberto e custo previsível.</p>
+      </div>
+      <div class="diff-grid">
+        <article class="diff-item">
+          <span class="tag">Local-first</span>
+          <h3>SQLite no perfil do usuário</h3>
+          <p>O banco vive em um arquivo no computador do cliente. O aplicativo funciona sem internet, o backup é uma cópia de arquivo e não existe back-end na nuvem no fluxo normal de uso.</p>
+        </article>
+        <article class="diff-item">
+          <span class="tag">Protocolo aberto</span>
+          <h3>Servidor MCP com 12 ferramentas</h3>
+          <p>Seis de leitura e seis de escrita, com escrita desabilitada por padrão. Clientes compatíveis, como Claude Desktop e Cursor, consultam leads, criam tarefas e registram atividades; cada chamada fica em log de auditoria.</p>
+        </article>
+        <article class="diff-item">
+          <span class="tag">Licenciamento</span>
+          <h3>Chave perpétua com assinatura Ed25519</h3>
+          <p>A validação acontece no próprio executável, com a chave pública embutida. Não há servidor de licenças para cair, e a revogação é distribuída por lista assinada nas atualizações.</p>
+        </article>
+        <article class="diff-item">
+          <span class="tag">Custo</span>
+          <h3>Pagamento único, sem assinatura</h3>
+          <p>O software não cobra mensalidade nem por uso. Serviços de IA são contratados diretamente pelo cliente com o fornecedor que escolher, e o produto não revende modelos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PERFIL E REQUISITOS -->
+  <section class="section section--muted" id="perfil" aria-labelledby="titulo-perfil">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Aplicação</p>
+        <h2 id="titulo-perfil">Para quem o produto foi desenhado.</h2>
+        <p class="lede">Ser específico sobre o encaixe evita expectativa errada dos dois lados.</p>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-col">
+          <h3>Indicado para</h3>
+          <ul>
+            <li><span class="mark mark--yes" aria-hidden="true">✓</span><span>Consultorias, agências e prestadores de serviço B2B com prospecção ativa e base própria de contatos.</span></li>
+            <li><span class="mark mark--yes" aria-hidden="true">✓</span><span>Times comerciais pequenos que precisam de processo e histórico sem contratar um CRM por assento.</span></li>
+            <li><span class="mark mark--yes" aria-hidden="true">✓</span><span>Operações que exigem que a base permaneça no computador da empresa, por política interna ou LGPD.</span></li>
+            <li><span class="mark mark--yes" aria-hidden="true">✓</span><span>Profissionais que já usam agentes de IA e querem colocá-los para consultar e atualizar o CRM.</span></li>
+          </ul>
+        </div>
+        <div class="profile-col">
+          <h3>Não indicado para</h3>
+          <ul>
+            <li><span class="mark mark--no" aria-hidden="true">–</span><span>Equipes que precisam de CRM multiusuário com sincronização em tempo real entre estações.</span></li>
+            <li><span class="mark mark--no" aria-hidden="true">–</span><span>Quem procura aplicativo web, mobile ou acesso por navegador em qualquer dispositivo.</span></li>
+            <li><span class="mark mark--no" aria-hidden="true">–</span><span>Quem espera integração nativa com WhatsApp, telefonia ou automação de disparo em massa.</span></li>
+            <li><span class="mark mark--no" aria-hidden="true">–</span><span>Quem precisa de relatórios exportáveis em CSV ou PDF nesta versão: esse recurso ainda não existe.</span></li>
+          </ul>
+        </div>
+      </div>
+      <table class="spec-table">
+        <caption>Requisitos técnicos</caption>
+        <tbody>
+          <tr><th scope="row">Sistema operacional</th><td>Windows 10 ou Windows 11, 64 bits</td></tr>
+          <tr><th scope="row">Hardware mínimo</th><td>Processador dual-core, 4 GB de RAM, 500 MB de disco livre</td></tr>
+          <tr><th scope="row">Rede</th><td>Necessária apenas para download, ativação e uso opcional de agentes de IA</td></tr>
+          <tr><th scope="row">Dados</th><td>Banco SQLite local, no perfil do usuário do Windows</td></tr>
+          <tr><th scope="row">Instalação</th><td>Instalador NSIS; o SmartScreen pode exibir aviso por ausência de certificado de assinatura</td></tr>
+          <tr><th scope="row">Licença</th><td>Perpétua, até 2 dispositivos, transferível por desativação</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 8. OFERTA -->
+  <section class="section section--paper" id="licenca" aria-labelledby="titulo-licenca">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Licença comercial</p>
+        <h2 id="titulo-licenca">Uma licença, sem recorrência.</h2>
+        <p class="lede">O valor cobre o direito de uso da versão atual e das atualizações da linha 1.x, além do suporte por e-mail em dias úteis.</p>
+      </div>
+      <div class="offer">
+        <div class="offer-includes">
+          <h3>O que está incluído</h3>
+          <ul>
+            <li>Aplicativo desktop completo para Windows 10/11 x64, com base de leads, funil, tarefas e histórico</li>
+            <li>Servidor MCP local com 12 ferramentas para agentes de IA</li>
+            <li>Licença perpétua para até 2 dispositivos, com validação offline</li>
+            <li>Atualizações da linha 1.x, incluindo correções de falhas encontradas no período de acesso antecipado</li>
+            <li>Instalador e documentação de instalação, ativação e requisitos</li>
+            <li>Suporte por e-mail em dias úteis, com prioridade para falhas de instalação e licença</li>
+            <li>Garantia de 7 dias, conforme o direito de arrependimento do Código de Defesa do Consumidor</li>
+          </ul>
+        </div>
+        <aside class="price-card" aria-label="Condições da licença">
+          <p class="plan">Licença individual · acesso antecipado</p>
+          <div class="price-amount">
+            <span class="currency">R$</span>
+            <span class="value">997<span class="cents">,00</span></span>
+          </div>
+          <p class="price-terms">Pagamento único · até 12x no cartão · sem mensalidade do software</p>
+          <ul class="price-list">
+            <li>Licença perpétua, sem renovação</li>
+            <li>Até 2 dispositivos por licença</li>
+            <li>Entrega da chave em até 1 dia útil</li>
+            <li>Download pela Hotmart, com espelho no Google Drive</li>
+            <li>Suporte por e-mail em dias úteis</li>
+          </ul>
+          <a class="btn btn-primary btn-lg btn-block" data-checkout href="https://pay.hotmart.com/O108604594H" rel="noopener">Adquirir licença</a>
+          <p class="price-foot">Pagamento e emissão de nota processados pela Hotmart. Parcelamento sujeito à análise da operadora do cartão.</p>
+          <p class="price-foot">Release 1.0.1-rc.1 em acesso antecipado: a validação final em Windows 10 e 11 reais está pendente. <a href="#engenharia">Ver o que já foi testado</a>.</p>
+          <p class="price-foot">Custos de serviços de IA são contratados diretamente pelo cliente com o fornecedor escolhido.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="section section--muted" id="faq" aria-labelledby="titulo-faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2 id="titulo-faq">Perguntas que aparecem antes da compra.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>O ProspectB2B PRO funciona sem internet?</summary>
+          <div class="answer">Sim. O aplicativo e o banco de dados rodam no seu computador. A internet é necessária para baixar o instalador, ativar a licença uma vez e, opcionalmente, conectar agentes de IA externos via MCP.</div>
+        </details>
+        <details>
+          <summary>Onde ficam os dados dos meus leads?</summary>
+          <div class="answer">Em um banco SQLite local, na pasta de dados do aplicativo dentro do seu usuário do Windows. O fluxo normal de uso não envia a base para servidores do fabricante: não existe back-end na nuvem.</div>
+        </details>
+        <details>
+          <summary>A licença é mensal?</summary>
+          <div class="answer">Não. A licença é perpétua, com pagamento único de R$ 997,00, que pode ser parcelado em até 12x no cartão pelo checkout da Hotmart. Não há assinatura nem cobrança recorrente do software.</div>
+        </details>
+        <details>
+          <summary>O produto está validado em Windows?</summary>
+          <div class="answer">Parcialmente. O release atual é 1.0.1-rc.1, em acesso antecipado. Os testes automatizados, o empacotamento e o fluxo de instalação estão implementados, mas a validação final em Windows 10 e 11 reais ainda está pendente — e é por isso que o produto é comercializado como acesso antecipado, com as condições informadas de forma explícita.</div>
+        </details>
+        <details>
+          <summary>Vou ver aviso de segurança ao instalar?</summary>
+          <div class="answer">Pode ver. O instalador não possui certificado digital de assinatura de código, então o SmartScreen pode exibir aviso de editor desconhecido. Isso não indica arquivo malicioso: o pacote é gerado a partir do código-fonte do projeto e o hash SHA-256 é publicado junto da entrega para conferência.</div>
+        </details>
+        <details>
+          <summary>Como recebo o arquivo e a licença?</summary>
+          <div class="answer">O download do instalador é feito pela Hotmart, com espelho no Google Drive como alternativa. A chave de licença é emitida manualmente após a confirmação da compra, em até 1 dia útil, e enviada para o e-mail informado no checkout.</div>
+        </details>
+        <details>
+          <summary>Quantos computadores posso ativar?</summary>
+          <div class="answer">A licença padrão permite até 2 dispositivos. Para trocar de máquina, basta desativar no aplicativo antigo e ativar no novo, sem precisar de nova emissão.</div>
+        </details>
+        <details>
+          <summary>O sistema é multiusuário?</summary>
+          <div class="answer">Não. O ProspectB2B PRO é uma aplicação local de uso individual por instalação. Não há sincronização entre estações nem colaboração em tempo real nesta versão.</div>
+        </details>
+        <details>
+          <summary>Preciso pagar algo para usar IA?</summary>
+          <div class="answer">O ProspectB2B PRO não cobra por uso de IA e não revende modelos. Se você conectar um agente externo, como Claude Desktop ou Cursor, via MCP, esse fornecedor pode cobrar pelo próprio serviço — custo contratado diretamente por você.</div>
+        </details>
+        <details>
+          <summary>E se eu precisar de reembolso?</summary>
+          <div class="answer">O pedido segue as regras de reembolso da Hotmart, plataforma responsável pelo pagamento, e o direito de arrependimento previsto no Código de Defesa do Consumidor. A licença vinculada a um pedido reembolsado é registrada como revogada no controle de licenças.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. ENGENHARIA E TRANSPARÊNCIA -->
+  <section class="section section--ink" id="engenharia" aria-labelledby="titulo-engenharia">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Engenharia e transparência</p>
+        <h2 id="titulo-engenharia">O que está comprovado, o que ainda falta e como tratamos isso.</h2>
+        <p class="lede">Publicar o estado real do produto é parte do processo, não uma concessão comercial.</p>
+      </div>
+      <div class="trans-grid">
+        <div class="trans-item trans-item--ok">
+          <h3>Testado e aprovado</h3>
+          <ul>
+            <li>81 testes unitários e 22 testes end-to-end do aplicativo</li>
+            <li>Concorrência entre dois processos: 514 gravações simultâneas, sem erro</li>
+            <li>Persistência do SQLite verificada após reinício</li>
+            <li>Licenciamento: 8 cenários sem chave e 9 com a chave real</li>
+            <li>Empacotamento gerado a partir do código-fonte</li>
+          </ul>
+        </div>
+        <div class="trans-item trans-item--pending">
+          <h3>Pendente</h3>
+          <ul>
+            <li>Validação final em Windows 10 e 11 reais, incluindo instalação, atualização e desinstalação automatizadas</li>
+            <li>Assinatura digital do instalador, que depende de certificado pago</li>
+            <li>Teste de aceite em máquina de terceiros</li>
+          </ul>
+        </div>
+        <div class="trans-item">
+          <h3>Suporte e garantia</h3>
+          <ul>
+            <li>Atendimento por e-mail em dias úteis, com prioridade para falhas de instalação e licença</li>
+            <li>Garantia de 7 dias, conforme o Código de Defesa do Consumidor</li>
+            <li>Correções da linha 1.x incluídas na licença</li>
+          </ul>
+        </div>
+      </div>
+      <p class="trans-note">Na prática: o produto instala e opera, mas ainda pode apresentar falhas específicas de ambiente Windows que só aparecem em máquina real. É por isso que ele é comercializado em acesso antecipado, com suporte direto para corrigir o que for encontrado e com o compromisso de não declarar validado o que não foi testado.</p>
+    </div>
+  </section>
+
+  <!-- 11. CTA FINAL -->
+  <section class="section--ink cta-final" aria-labelledby="titulo-cta">
+    <div class="wrap">
+      <h2 id="titulo-cta">Avalie a licença com a sua própria base.</h2>
+      <p>Importe uma planilha real, organize o funil e veja se o processo faz sentido para a sua operação. Se não fizer, a garantia de 7 dias cobre a devolução.</p>
+      <a class="btn btn-primary btn-lg" data-checkout href="https://pay.hotmart.com/O108604594H" rel="noopener">Adquirir licença — R$ 997</a>
+      <p class="micro">Licença perpétua · até 2 dispositivos · entrega em até 1 dia útil · acesso antecipado</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#topo">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span class="brand-text">ProspectB2B <em>PRO</em></span>
+        </a>
+        <p>Software desktop de prospecção B2B com banco local e servidor MCP integrado.</p>
+      </div>
+      <div>
+        <h3>Produto</h3>
+        <ul>
+          <li><a href="#produto">Funcionalidades</a></li>
+          <li><a href="#tecnologia">Arquitetura</a></li>
+          <li><a href="#perfil">Requisitos</a></li>
+          <li><a href="#demonstracao">Demonstração</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comercial</h3>
+        <ul>
+          <li><a href="#licenca">Licença e condições</a></li>
+          <li><a data-checkout href="https://pay.hotmart.com/O108604594H" rel="noopener">Checkout oficial</a></li>
+          <li><a href="#engenharia">Estado do release</a></li>
+          <li><a href="#faq">Dúvidas frequentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Suporte</h3>
+        <ul>
+          <li><a data-support href="https://docs.google.com/forms/d/e/1FAIpQLSeWK0uPoaDeRBIny4SnVtWTCTce0-7_yYTJawaaKhl_lDdARw/viewform" rel="noopener" target="_blank">Formulário de atendimento</a></li>
+          <li><a href="#faq">Instalação e ativação</a></li>
+          <li><a href="#engenharia">Garantia e reembolso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© <span data-ano>2026</span> ProspectB2B PRO. Todos os direitos reservados.</span>
+      <span>Pagamento e distribuição pela Hotmart. Windows é marca registrada da Microsoft Corporation.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="consent" data-consent role="dialog" aria-live="polite" aria-label="Preferências de medição">
+  <p>Usamos medição de audiência para entender o uso do site. Você pode recusar sem perder nenhuma funcionalidade.</p>
+  <div class="consent-actions">
+    <button class="btn btn-ghost btn-sm" type="button" data-consent-decline>Recusar</button>
+    <button class="btn btn-primary btn-sm" type="button" data-consent-accept>Aceitar</button>
+  </div>
+</div>
+
+<script src="/config.js"></script>
+<script src="/app.js" defer></script>
+</body>
+</html>
